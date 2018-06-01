@@ -10,16 +10,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.bankbridge.client.BankClient;
 import io.bankbridge.dto.BankDTO;
 
-public class BanksRemoteCallsHandler {
+public class BanksRemoteCalls {
 
     private Map<String, String> config;
     private BankClient bankClient;
 
-    public BanksRemoteCallsHandler() throws Exception {
+    public BanksRemoteCalls() throws Exception {
         init();
     }
 
-    BanksRemoteCallsHandler(BankClient bankClient, Map<String, String> config) {
+    BanksRemoteCalls(BankClient bankClient, Map<String, String> config) {
         this.config = config;
         this.bankClient = bankClient;
     }

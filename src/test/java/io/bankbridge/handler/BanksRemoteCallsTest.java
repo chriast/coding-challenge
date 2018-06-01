@@ -1,21 +1,17 @@
 package io.bankbridge.handler;
 
 import io.bankbridge.client.BankClient;
-import io.bankbridge.dto.BankDTO;
 import io.bankbridge.model.BankModel;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
-public class BanksRemoteCallsHandlerTest {
+public class BanksRemoteCallsTest {
 
     @Test
     public void handle() {
@@ -31,7 +27,7 @@ public class BanksRemoteCallsHandlerTest {
 
         when(dummyBankClient.getBankDetails(dummyConfig.get("test bank"))).thenReturn(dummyModel);
 
-        BanksRemoteCallsHandler testHandler = new BanksRemoteCallsHandler(dummyBankClient,dummyConfig);
+        BanksRemoteCalls testHandler = new BanksRemoteCalls(dummyBankClient,dummyConfig);
         String actualResult = testHandler.handle();
         Assert.assertEquals(expectedResult,actualResult);
 

@@ -7,14 +7,14 @@ import io.bankbridge.dto.BankDTO;
 
 import java.util.List;
 
-public class BanksCacheBasedHandler {
+public class BanksCacheBased {
     private final BanksCache bankCache;
 
-    public BanksCacheBasedHandler() {
+    public BanksCacheBased() {
         bankCache = BanksCache.getInstance();
     }
 
-    BanksCacheBasedHandler(BanksCache banksCache) {
+    BanksCacheBased(BanksCache banksCache) {
         this.bankCache = banksCache;
     }
 

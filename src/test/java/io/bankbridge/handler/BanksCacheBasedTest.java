@@ -5,15 +5,13 @@ import io.bankbridge.dto.BankDTO;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnit;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
-public class BanksCacheBasedHandlerTest {
+public class BanksCacheBasedTest {
 
     @Test
     public void handle() {
@@ -24,7 +22,7 @@ public class BanksCacheBasedHandlerTest {
         banks.add(bankDTO);
 
         BanksCache banksCache = Mockito.mock(BanksCache.class);
-        BanksCacheBasedHandler testHandler = new BanksCacheBasedHandler(banksCache);
+        BanksCacheBased testHandler = new BanksCacheBased(banksCache);
         when(banksCache.getAllFromCache()).thenReturn(banks);
         String actualResult = testHandler.handle();
 
