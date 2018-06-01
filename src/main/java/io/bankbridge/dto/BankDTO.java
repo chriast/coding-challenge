@@ -4,13 +4,13 @@ import java.util.Objects;
 
 //This replaces the previous use of a map for storing the data that is to be printed.
 public class BankDTO {
-    private String id;
     private String name;
+    private String id;
 
     public BankDTO() {
     }
 
-    public BankDTO(String name, String id) {
+    public BankDTO(String id, String name) {
         this.id = id;
         this.name = name;
     }

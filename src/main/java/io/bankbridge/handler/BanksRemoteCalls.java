@@ -35,7 +35,7 @@ public class BanksRemoteCalls {
         List<BankDTO> banks = new ArrayList<>();
         for (Map.Entry<String, String> entry : config.entrySet()) {
             String id = bankClient.getBankDetails(entry.getValue()).getBic();
-            banks.add(new BankDTO(entry.getKey(), id));
+            banks.add(new BankDTO(id,entry.getKey()));
         }
         try {
             return new ObjectMapper().writeValueAsString(banks);

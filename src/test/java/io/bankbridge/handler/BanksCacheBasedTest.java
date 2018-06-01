@@ -15,7 +15,7 @@ public class BanksCacheBasedTest {
 
     @Test
     public void handle() {
-        String expectedResult = "[{\"id\":\"101\",\"name\":\"testname\"}]";
+        String expectedResult = "[{\"name\":\"testname\",\"id\":\"101\"}]";
 
         List<BankDTO> banks = new ArrayList<>();
         BankDTO bankDTO = new BankDTO("101","testname");

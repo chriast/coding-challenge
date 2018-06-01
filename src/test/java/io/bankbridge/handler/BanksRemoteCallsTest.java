@@ -16,7 +16,7 @@ public class BanksRemoteCallsTest {
     @Test
     public void handle() {
 
-        String expectedResult = "[{\"id\":\"101\",\"name\":\"test bank\"}]";
+        String expectedResult = "[{\"name\":\"test bank\",\"id\":\"101\"}]";
 
         BankClient dummyBankClient = Mockito.mock(BankClient.class);
 
